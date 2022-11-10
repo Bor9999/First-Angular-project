@@ -23,6 +23,6 @@ import { ContactsComponent } from './content/contacts/contacts.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [SignUpComponent] //AppComponent
+  bootstrap: [AppComponent] //AppComponent
 })
 export class AppModule { }
