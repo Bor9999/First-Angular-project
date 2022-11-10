@@ -42,6 +42,8 @@
       display: flex;
       flex-direction: column;
       font-size: 14px;
+      position: relative;
+
       [type="password"],[type="email"],[type="text"] {
         display: block;
         width: 100%;
@@ -104,6 +106,13 @@
         height: 44px;
         border-radius: 4px;
       }
+      #password-eye, #conf-password-eye{
+        position: absolute;
+        right: 12px;
+        bottom: 5px;
+        cursor: pointer;
+      }
+
     }
     .form__group_horizontal{
       flex-direction:row;
