@@ -8,6 +8,8 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { NavBarComponent } from './navigation/nav-bar/nav-bar.component';
 import { FootBarComponent } from './navigation/foot-bar/foot-bar.component';
 import { ContactsComponent } from './content/contacts/contacts.component';
+import { HttpClientModule } from '@angular/common/http';
+import { InlineSVGModule } from 'ng-inline-svg-2';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ContactsComponent } from './content/contacts/contacts.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    InlineSVGModule
   ],
   providers: [],
   bootstrap: [AppComponent] //AppComponent

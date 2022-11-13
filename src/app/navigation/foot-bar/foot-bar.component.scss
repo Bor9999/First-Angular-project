@@ -106,11 +106,10 @@
           align-items: center;
           justify-content: center;
           margin-right: 20px;
-          &:hover{
-            svg{
+          &:hover ::ng-deep svg{
               fill: var(--red-color);
             }
-          }
+
         }
 
     }

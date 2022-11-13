@@ -14,4 +14,7 @@ export class ContactsComponent implements OnInit {
   email:string = "hello@createx.com";
   phoneNumber:number = 4055550128;
   adress:string = "2464 Royal Ln. Mesa, New Jersey 45463, USA";
+
+  socials = ['facebook','twitter','utube','telegram','instagram','linkedin']
+
 }

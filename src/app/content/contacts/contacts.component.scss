@@ -61,18 +61,18 @@
     }
     .contact-info__socials-container{
       margin-top: 24px;
-      display: flex;
+      display: grid;
+      grid-template-columns: 24px 24px 24px 24px 24px 24px;
+      grid-column-gap: 32px;
+      grid-row-gap: 16px;
       a {
         width: 24px;
         height: 24px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-right: 32px;
-        &:hover{
-          svg{
+        &:hover ::ng-deep svg{
             fill: var(--red-color);
-          }
         }
       }
     }

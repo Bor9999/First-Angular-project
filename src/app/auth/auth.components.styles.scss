@@ -149,11 +149,8 @@
       grid-template-columns: 1fr 1fr 1fr 1fr;
       margin: 16px 0px 48px;
       width: 116px;
-      // justify-content: space-between;
-      // align-items: center;
       padding: 0;
 
-      // align-items: center;
       li{
         width: 20px;
         height: 20px;
@@ -166,7 +163,7 @@
           align-items: center;
         }
         &:hover {
-         a svg{
+         a ::ng-deep svg{
           fill: var(--red-color);
           }
         }
