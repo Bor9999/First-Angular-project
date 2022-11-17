@@ -1,9 +1,49 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$fPJ-primary: mat.define-palette(mat.$indigo-palette);
+$fPJ-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$fPJ-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$fPJ-theme: mat.define-light-theme((
+  color: (
+    primary: $fPJ-primary,
+    accent: $fPJ-accent,
+    warn: $fPJ-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($fPJ-theme);
+
 :root{
   --red-color: #FF3F3A;
   --dark-blue-color: #1E212C;
   --def-font-color: #424551;
   --place-holder-color: #9A9CA5;
 }
+.wrapper{
+  width: 1230px;
+  margin: 0 auto;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
 *{
   box-sizing: border-box;
@@ -195,3 +235,6 @@ template {
 .button{
 
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

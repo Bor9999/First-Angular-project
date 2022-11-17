@@ -10,6 +10,13 @@ import { FootBarComponent } from './navigation/foot-bar/foot-bar.component';
 import { ContactsComponent } from './content/contacts/contacts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InlineSVGModule } from 'ng-inline-svg-2';
+import { SinglePostComponent } from './content/blog/single-post/single-post.component';
+import { MatIconModule } from '@angular/material/icon';
+import { IconService } from './services/icon.service';
+import { MatCardModule} from '@angular/material/card';
+import { ToGrayDirective } from './custom-directives/to-gray.directive';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -18,15 +25,19 @@ import { InlineSVGModule } from 'ng-inline-svg-2';
     SignUpComponent,
     NavBarComponent,
     FootBarComponent,
-    ContactsComponent
+    ContactsComponent,
+    SinglePostComponent,
+    ToGrayDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    InlineSVGModule
+    InlineSVGModule,
+    MatIconModule,
+    MatCardModule
   ],
-  providers: [],
+  providers: [IconService],
   bootstrap: [AppComponent] //AppComponent
 })
 export class AppModule { }
