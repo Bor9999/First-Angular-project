@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class SignInComponent implements OnInit {
 
   isHiddenPassword = true;
-  pathClosedEyes = "./assets/img/icons/closed-eye.svg";
-  pathEyes = "./assets/img/icons/eyes.svg";
+  pathClosedEyes = "assets/img/icons/closed-eye.svg";
+  pathEyes = "assets/img/icons/eyes.svg";
   socials = ['facebook','google','twitter','linkedin']
     constructor() {
 

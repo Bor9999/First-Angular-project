@@ -15,7 +15,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { IconService } from './services/icon.service';
 import { MatCardModule} from '@angular/material/card';
 import { ToGrayDirective } from './custom-directives/to-gray.directive';
-import { RouterModule } from '@angular/router';
+import {MatDialogModule} from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -35,7 +36,9 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     InlineSVGModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
   providers: [IconService],
   bootstrap: [AppComponent] //AppComponent

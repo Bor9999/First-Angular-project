@@ -50,6 +50,11 @@
   }
   .header__auth{
     text-decoration: none;
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
     color: var(--def-font-color);
     display: flex;
     align-items: center;
@@ -60,4 +65,7 @@
       margin-right: 5px;
     }
   }
+}
+::ng-deep .authModal {
+  .mat-dialog-container{padding: 0;}
 }

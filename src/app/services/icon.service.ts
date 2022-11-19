@@ -8,9 +8,9 @@ import {MatIconRegistry} from '@angular/material/icon';
 export class IconService {
 
   socialIcons = ['facebook','twitter','utube','telegram','instagram','linkedin'];
-  socialIconsPath = '../assets/img/socials';
+  socialIconsPath = 'assets/img/socials';
   defaultIcons = ['calendar','files','clock','checkMark','braces','search','mic','right','person'];
-  defaultIconsPath = '../assets/img/icons';
+  defaultIconsPath = 'assets/img/icons';
   constructor(private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer) { }
 
@@ -21,7 +21,7 @@ export class IconService {
 
     private loadIcons(iconKeys: string[], iconUrl: string): void {
       iconKeys.forEach(key => {
-        this.matIconRegistry.addSvgIcon(key, this.domSanitizer.bypassSecurityTrustResourceUrl(`${iconUrl}/${key}.svg`)); console.log((`${iconUrl}/${key}.svg`));
+        this.matIconRegistry.addSvgIcon(key, this.domSanitizer.bypassSecurityTrustResourceUrl(`${iconUrl}/${key}.svg`));
       });
     }
 }

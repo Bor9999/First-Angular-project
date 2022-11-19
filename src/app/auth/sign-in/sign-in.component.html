@@ -1,5 +1,5 @@
 <div class="auth-modal-window">
-  <div class="cross-btn"><img src="./assets/img/cross.svg" alt="Close"></div>
+  <div class="cross-btn" [matDialogClose]><img src="assets/img/cross.svg" alt="Close"></div>
   <h3>Sign In</h3>
   <p>Sign in to your account using email and password provided during registration.</p>
   <form action="" class="form">
@@ -33,7 +33,7 @@
     <div class="socials__title">Or sign in with</div>
     <ul class="socials__list">
       <li *ngFor="let item of socials">
-        <a href="" [inlineSVG]="'./assets/img/socials/' + item + '.svg'"></a>
+        <a href="" [inlineSVG]="'assets/img/socials/' + item + '.svg'"></a>
       </li>
     </ul>
   </div>
