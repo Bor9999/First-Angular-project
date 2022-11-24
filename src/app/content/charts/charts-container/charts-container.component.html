@@ -1,0 +1,11 @@
+<div class="container" *ngIf="chartService.dataArray != undefined">
+  <div class="block" *ngFor="let chartUnit of chartService.dataArray; let i = index">
+  <app-chart [dataset]="chartUnit" [index]="i" ></app-chart>
+  </div>
+  <ng-container *ngIf="chartService.generalData != undefined">
+    <div class="block">
+    <app-chart [dataset]="chartService.generalData![0]" [index]="'all'" ></app-chart>
+    </div>
+</ng-container>
+  </div>
+

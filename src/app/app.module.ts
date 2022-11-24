@@ -17,6 +17,8 @@ import { MatCardModule} from '@angular/material/card';
 import { ToGrayDirective } from './custom-directives/to-gray.directive';
 import {MatDialogModule} from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ChartComponent } from './content/charts/chart/chart.component';
+import { ChartsContainerComponent } from './content/charts/charts-container/charts-container.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FootBarComponent,
     ContactsComponent,
     SinglePostComponent,
-    ToGrayDirective
+    ToGrayDirective,
+    ChartComponent,
+    ChartsContainerComponent
   ],
   imports: [
     BrowserModule,
