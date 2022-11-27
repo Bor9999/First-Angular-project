@@ -15,7 +15,7 @@
   <div class="footer__unit"><a href="" class="footer__link">About Us</a></div>
   <div class="footer__unit"><a href="" class="footer__link">Marketing</a></div>
   <div class="footer__unit footer__unit_with-icon">
-    <a href="tel:+" class="footer__link"><img src="assets/img/icons/phone-gray.svg" alt="">(405) 555-0128</a>
+    <a [href]="'tel:+'+ phone" class="footer__link"><img src="assets/img/icons/phone-gray.svg" alt="">{{phone}}</a>
   </div>
   <div class="footer__unit">
     <div class="footer__email-input">
@@ -30,7 +30,7 @@
   <div class="footer__unit"><a href="" class="footer__link">Courses</a></div>
   <div class="footer__unit"><a href="" class="footer__link">Management</a></div>
   <div class="footer__unit footer__unit_with-icon">
-    <a href="mailto:hello@createx.com" class="footer__link"><img src="assets/img/icons/mail.svg" alt="">hello@createx.com</a>
+    <a [href]="'mailto:'+ email" class="footer__link"><img src="assets/img/icons/mail.svg" alt="">{{email}}</a>
   </div>
   <div class="footer__unit"><a href="" class="footer__link">Events</a></div>
   <div class="footer__unit"><a href="" class="footer__link">HR & Recruting</a></div>

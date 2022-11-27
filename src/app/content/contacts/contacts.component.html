@@ -11,7 +11,7 @@
         <img src="assets/img/icons/chat.svg" alt="Chat icon"></div>
       <div class="contact-info__subgroup">
         <p>Talk to us:</p>
-        <a href="mailto:{{email}}"> {{email}} </a>
+        <a [href]="'mailto:'+email"> {{email}} </a>
       </div>
      </div>
      <div class="contact-info__group">
@@ -19,7 +19,7 @@
           <img src="assets/img/icons/phone.svg" alt="phone icon"></div>
       <div class="contact-info__subgroup">
         <p>Call us:</p>
-        <a href="tel:+{{phoneNumber}}"> {{phoneNumber}} </a>
+        <a [href]="'tel:+'+ phoneNumber"> {{phoneNumber}} </a>
       </div>
      </div>
      <div class="contact-info__group">

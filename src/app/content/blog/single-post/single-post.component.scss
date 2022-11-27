@@ -1,3 +1,5 @@
+$gray: #424551;
+
 *{
   margin: 0;
   padding: 0;
@@ -139,7 +141,7 @@ a {
         font-weight: 400;
         font-size: 16px;
         line-height: 160%;
-        color: #424551;
+        color: $gray;
 
 
       }
@@ -224,7 +226,7 @@ a {
           line-height: 150%;
           letter-spacing: 1px;
           text-transform: uppercase;
-          color: #1E212C;
+          color: var(--dark-blue-color);
         }
       }
       .section__block{
@@ -240,7 +242,7 @@ a {
           .name{
             height: 50%;
             p{
-              color: #424551;
+              color: $gray;
               font-style: normal;
               font-weight: 700;
               font-size: 20px;
@@ -290,7 +292,7 @@ a {
               font-weight: 700;
               font-size: 16px;
               line-height: 160%;
-              color: #1E212C;
+              color: var(--dark-blue-color);
 
             }
           }
@@ -333,7 +335,7 @@ a {
         font-weight: 900;
         font-size: 32px;
         line-height: 130%;
-        color: #1E212C;
+        color: var(--dark-blue-color);
         font-style: normal;
         margin-bottom: 48px;
       }
@@ -404,7 +406,7 @@ a {
       font-weight: 700;
       font-size: 16px;
       line-height: 150%;
-      color: #1E212C;
+      color: var(--dark-blue-color);
       letter-spacing: 1px;
       text-transform: uppercase;
     }
@@ -413,7 +415,7 @@ a {
       font-weight: 900;
       font-size: 46px;
       line-height: 130%;
-      color: #1E212C;
+      color: var(--dark-blue-color);
     }
   }
   .related-post__carousel {
@@ -431,7 +433,7 @@ a {
         padding: 0;
         background: #FFFFFF;
         border-radius: 4px;
-        color: #424551;
+        color: $gray;
         font-weight: 400;
         font-size: 14px;
         line-height: 150%;
@@ -446,7 +448,7 @@ a {
           height: 16px;
           margin-right: 6px;
           ::ng-deep svg{
-            fill: #424551;
+            fill: $gray;
           }
         }
       }
@@ -479,14 +481,14 @@ a {
         font-weight: 700;
         font-size: 20px;
         line-height: 150%;
-        color: #1E212C;
+        color: var(--dark-blue-color);
       }
       .text{
         margin-top: 8px;
         font-weight: 400;
         font-size: 16px;
         line-height: 160%;
-        color: #424551;
+        color: $gray;
       }
     }
     .mat-card-actions{
@@ -516,7 +518,7 @@ a {
     font-weight: 700;
     font-size: 28px;
     line-height: 150%;
-    color: #1E212C;
+    color: var(--dark-blue-color);
     margin-right: 40px;
   }
   button{

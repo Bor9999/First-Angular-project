@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ContactsContainerService } from './services/contacts-container.service';
 import { IconService } from './services/icon.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { IconService } from './services/icon.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private iconService:IconService){
+  constructor(private iconService:IconService, private contactsService:ContactsContainerService){
     this.iconService.registerIcons();
   }
   title = 'fPJ';

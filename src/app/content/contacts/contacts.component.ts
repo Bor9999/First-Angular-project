@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactsContainerService } from 'src/app/services/contacts-container.service';
 
 @Component({
   selector: 'app-contacts',
@@ -7,13 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private contactsContainer:ContactsContainerService) { }
 
   ngOnInit(): void {
   }
-  email:string = "hello@createx.com";
-  phoneNumber:number = 4055550128;
-  adress:string = "2464 Royal Ln. Mesa, New Jersey 45463, USA";
+
+
+
+  email = this.contactsContainer.email;
+  phoneNumber = this.contactsContainer.phoneNumber;
+  adress = this.contactsContainer.adress;
 
   socials = ['facebook','twitter','utube','telegram','instagram','linkedin']
 

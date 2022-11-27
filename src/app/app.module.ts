@@ -19,6 +19,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChartComponent } from './content/charts/chart/chart.component';
 import { ChartsContainerComponent } from './content/charts/charts-container/charts-container.component';
+import { ChartService } from './services/chart.service';
+import { ContactsContainerService } from './services/contacts-container.service';
 
 
 @NgModule({
@@ -44,7 +46,7 @@ import { ChartsContainerComponent } from './content/charts/charts-container/char
     MatDialogModule,
     BrowserAnimationsModule
   ],
-  providers: [IconService],
+  providers: [IconService, ContactsContainerService],
   bootstrap: [AppComponent] //AppComponent
 })
 export class AppModule { }

@@ -16,12 +16,15 @@
               <mat-icon class="miniIcon" svgIcon="calendar"></mat-icon><span>August 3, 2020</span>
               <mat-icon class="miniIcon" svgIcon="clock"></mat-icon><span>4 min read</span>
             </div>
-            <div class="share">
-              <span>Share:</span>
-              <a href=""><mat-icon class="socialIcon" svgIcon="facebook"></mat-icon></a>
-              <a href=""><mat-icon class="socialIcon" svgIcon="twitter"></mat-icon></a>
-              <a href=""><mat-icon class="socialIcon" svgIcon="linkedin"></mat-icon></a>
-            </div>
+            <ng-template #share>
+              <div class="share">
+                  <span>Share:</span>
+                  <a href=""><mat-icon class="socialIcon" svgIcon="facebook"></mat-icon></a>
+                  <a href=""><mat-icon class="socialIcon" svgIcon="twitter"></mat-icon></a>
+                  <a href=""><mat-icon class="socialIcon" svgIcon="linkedin"></mat-icon></a>
+              </div>
+            </ng-template>
+            <ng-container *ngTemplateOutlet="share"></ng-container>
           </div>
         </div>
         <div class="post__content">
@@ -94,12 +97,7 @@
             <a href="" class="tag">#HR</a>
             <a href="" class="tag">#self-development</a>
           </div>
-          <div class="share">
-            <span>Share:</span>
-              <a href=""><mat-icon class="socialIcon" svgIcon="facebook"></mat-icon></a>
-              <a href=""><mat-icon class="socialIcon" svgIcon="twitter"></mat-icon></a>
-              <a href=""><mat-icon class="socialIcon" svgIcon="linkedin"></mat-icon></a>
-          </div>
+          <ng-container *ngTemplateOutlet="share"></ng-container>
         </div>
       </div>
     </div>

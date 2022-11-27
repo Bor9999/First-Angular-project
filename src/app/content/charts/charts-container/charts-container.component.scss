@@ -1,7 +1,7 @@
 .container {
   display: grid;
   // overflow: scroll;
-  grid-template-columns: 800px 800px 800px 800px;
+  grid-template-columns: repeat(4, 800px);
   // grid-column-gap: 30px;
   // grid-row-gap: 30px;
   grid-gap: 30px;

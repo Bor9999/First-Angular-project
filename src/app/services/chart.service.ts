@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
+import { ChartComponent } from '../content/charts/chart/chart.component';
+import { ChartsContainerComponent } from '../content/charts/charts-container/charts-container.component';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
-export interface Slice {
+export interface IncomeDataSlice {
   src_office_id: number,
   office_name: string,
   dt_date: string,
@@ -9,36 +13,45 @@ export interface Slice {
   qty_delivered: number,
   qty_return: number
 }
+export interface DataUnit {
+  x: string,
+  y: number
+}
+export interface DataBox{
+  [key:string|number]:Array<IncomeDataSlice>
+}
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable(
+
+)
 export class ChartService {
-  public dataArray: Array<any> | undefined;
-  public generalData: Array<any> | undefined;
 
+  public dataArray: Array<Array<Array<DataUnit>>> | undefined;
 
-  constructor() {
+  constructor( private _require:HttpClient) {
 
   }
 
-  _init(){
-    let data = this.parsedata().then( data =>{
-      let result = data.reduce((acc:any, el) => {
+  startService(){
+
+
+
+    this.parsedata().subscribe( data =>{
+      let result = data.reduce((acc:DataBox, el) => {
         let key = el.src_office_id;
         acc[key] = acc[key] ? [...acc[key], el] : [el];
         return acc;
       }, {});
-
+        console.log(result);
       let temp = [];
       for (let id in result){
-        let names:any = [];
-        let orders = [];
-        let neword = [];
-        let delivered = [];
-        let returned = [];
-        names.push(result[id][0].office_name)
-        names.push(result[id][0].src_office_id)
+        const names: Array<any> = [];
+        const orders: Array<DataUnit> = [];
+        const neword: Array<DataUnit> = [];
+        const delivered: Array<DataUnit> = [];
+        const returned: Array<DataUnit> = [];
+        names.push(result[id][0].office_name);
+        names.push(result[id][0].src_office_id);
 
 
         for (let key in result[id]){
@@ -48,32 +61,32 @@ export class ChartService {
         delivered.push({x:temp[key].dt_date, y:temp[key].qty_delivered});
         returned.push({x:temp[key].dt_date, y:temp[key].qty_return});
         }
-        temp.push([names,orders,neword,delivered,returned])
+        temp.push([names,orders,neword,delivered,returned]);
       }
-      this.dataArray = temp;
 
-      let general = data.reduce((acc:any, el) => {
+
+      let general = data.reduce((acc:DataBox, el) => {
         let key = el.dt_date;
         acc[key] = acc[key] ? [...acc[key], el] : [el];
         return acc;
       }, {});
 
-      let temp2 = [];
-      let namesArr = [];
-      let ordersArr = [];
-      let newordArr = [];
-      let deliveredArr = [];
-      let returnedArr = [];
-      namesArr.push('General Stats')
-      namesArr.push('all')
+      const namesArr: Array<any> = [];
+      const ordersArr: Array<DataUnit> = [];
+      const newordArr: Array<DataUnit> = [];
+      const deliveredArr: Array<DataUnit> = [];
+      const returnedArr: Array<DataUnit> = [];
+
+      namesArr.push('General Stats');
+      namesArr.push('all');
+
       for (let i in general){
 
         let date = i;
-        let orders: number = 0;
-        let neword: number = 0;
-        let delivered: number = 0;
-        let returned: number = 0;
-
+        let orders = 0;
+        let neword= 0;
+        let delivered= 0;
+        let returned= 0;
 
         for(let j in general[i]){
           orders = orders + general[i][j]?.qty_orders;
@@ -86,17 +99,16 @@ export class ChartService {
         deliveredArr.push({x:date, y:delivered});
         returnedArr.push({x:date, y:returned});
       }
-      temp2.push([namesArr,ordersArr,newordArr,deliveredArr,returnedArr])
-      this.generalData = temp2;
+
+      temp.push([namesArr,ordersArr,newordArr,deliveredArr,returnedArr]);
+      this.dataArray = temp;
       console.log(this.dataArray);
+
     })
 
   }
 
-  parsedata = async (): Promise<Array<Slice>> => {
-      let  data  = await fetch('assets/02.json').then(response => {
-              return response.json();
-            })
-      return data
-    }
+  parsedata(): Observable<Array<IncomeDataSlice>>{
+    return this._require.get<Array<IncomeDataSlice>>('assets/02.json')
+  }
 }

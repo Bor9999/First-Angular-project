@@ -146,7 +146,7 @@
     &__list{
       list-style: none;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
       margin: 16px 0px 48px;
       width: 116px;
       padding: 0;

@@ -1,6 +1,7 @@
 import { Component, OnInit , Input, OnChanges, SimpleChanges, AfterViewInit} from '@angular/core';
 import {Chart,registerables, _adapters} from 'chart.js'
 import 'chartjs-adapter-date-fns';
+import { DataUnit } from 'src/app/services/chart.service';
 Chart.register(...registerables);
 
 @Component({
@@ -8,32 +9,30 @@ Chart.register(...registerables);
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.scss']
 })
-export class ChartComponent implements OnInit, AfterViewInit{
+export class ChartComponent implements OnInit,AfterViewInit,OnChanges{
 
-  @Input() dataset!: Array<any> | undefined;
+  @Input() dataset!: Array<Array<DataUnit>> | undefined;
   @Input() index!: number| string;
   name:string |undefined;
-  draw = false;
-  constructor() {
 
-   }
+  constructor() {}
   ngAfterViewInit() {
-    if(this.draw == false){
-    this.initChart(this.name!); this.draw=true}
+
+    this.initChart(this.name!);
+
   }
   ngOnChanges(changes: SimpleChanges) {
 
-    if (changes['dataset'] && this.dataset !=undefined) {
-
+    if (changes['dataset']) {
         this.name= 'id'+this.index;
     }
 
 }
   ngOnInit(): void {  }
 
-  initChart(nm: string){
+  initChart(name: string){
 
-    let chart = new Chart( nm, {
+    let chart = new Chart( name, {
       type: 'line',
       data: {
 
@@ -74,7 +73,7 @@ export class ChartComponent implements OnInit, AfterViewInit{
         plugins: {
             title: {
                 display: true,
-                text: "id"+this.dataset![0][1] + " "+ this.dataset![0][0]
+                text: "id "+this.dataset![0][1] + " "+ this.dataset![0][0]
             }
         }
       }
