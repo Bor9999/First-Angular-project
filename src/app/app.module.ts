@@ -13,15 +13,16 @@ import { InlineSVGModule } from 'ng-inline-svg-2';
 import { SinglePostComponent } from './content/blog/single-post/single-post.component';
 import { MatIconModule } from '@angular/material/icon';
 import { IconService } from './services/icon.service';
-import { MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { ToGrayDirective } from './custom-directives/to-gray.directive';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChartComponent } from './content/charts/chart/chart.component';
 import { ChartsContainerComponent } from './content/charts/charts-container/charts-container.component';
 import { ChartService } from './services/chart.service';
 import { ContactsContainerService } from './services/contacts-container.service';
-
+import { BlogMainComponent } from './content/blog/blog-main/blog-main.component';
+import { BlogPostCardComponent } from './content/blog/common/blog-post-card/blog-post-card.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import { ContactsContainerService } from './services/contacts-container.service'
     SinglePostComponent,
     ToGrayDirective,
     ChartComponent,
-    ChartsContainerComponent
+    ChartsContainerComponent,
+    BlogMainComponent,
+    BlogPostCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,9 +47,9 @@ import { ContactsContainerService } from './services/contacts-container.service'
     MatIconModule,
     MatCardModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [IconService, ContactsContainerService],
-  bootstrap: [AppComponent] //AppComponent
+  bootstrap: [AppComponent], //AppComponent
 })
-export class AppModule { }
+export class AppModule {}

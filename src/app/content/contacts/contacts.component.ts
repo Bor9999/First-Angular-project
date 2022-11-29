@@ -4,22 +4,23 @@ import { ContactsContainerService } from 'src/app/services/contacts-container.se
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.scss']
+  styleUrls: ['./contacts.component.scss'],
 })
 export class ContactsComponent implements OnInit {
+  constructor(private contactsContainer: ContactsContainerService) {}
 
-
-  constructor(private contactsContainer:ContactsContainerService) { }
-
-  ngOnInit(): void {
-  }
-
-
+  ngOnInit(): void {}
 
   email = this.contactsContainer.email;
   phoneNumber = this.contactsContainer.phoneNumber;
   adress = this.contactsContainer.adress;
 
-  socials = ['facebook','twitter','utube','telegram','instagram','linkedin']
-
+  socials = [
+    'facebook',
+    'twitter',
+    'utube',
+    'telegram',
+    'instagram',
+    'linkedin',
+  ];
 }

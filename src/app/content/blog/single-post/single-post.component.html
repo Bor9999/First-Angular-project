@@ -222,69 +222,9 @@
       <h1>You may also like</h1>
     </header>
     <div class="related-post__carousel">
-      <mat-card appToGray>
-        <img mat-card-image src="assets/img/card1.png">
-        <div class="type">
-          <mat-icon svgIcon="mic"></mat-icon>
-          <span>Podcast</span>
-        </div>
-        <mat-card-content>
-          <div class="meta">
-            <span>Design</span> | <mat-icon svgIcon="calendar"></mat-icon><span> July 28, 2020</span> | <mat-icon svgIcon="clock"></mat-icon> <span>36 min</span>
-          </div>
-          <div class="topic">
-            <p>What are color profiles and how they work in graphic design</p>
-          </div>
-          <div class="text">
-            Aliquam vulputate hendrerit quam sollicitudin urna enim viverra gravida. Consectetur urna arcu eleifend...
-          </div>
-        </mat-card-content>
-        <mat-card-actions>
-          <a href=""><span>Listen</span><mat-icon svgIcon="right"></mat-icon></a>
-        </mat-card-actions>
-      </mat-card>
-      <mat-card appToGray>
-        <img mat-card-image src="assets/img/card2.png">
-        <div class="type">
-          <mat-icon svgIcon="files"></mat-icon>
-          <span>Article</span>
-        </div>
-        <mat-card-content>
-          <div class="meta">
-            <span>Development</span> | <mat-icon svgIcon="calendar"></mat-icon><span> September 1, 2020</span>
-          </div>
-          <div class="topic">
-            <p>How to choose the first programming language for a beginner</p>
-          </div>
-          <div class="text">
-            Turpis sed at magna laoreet gravida consequat tortor placerat. Gravida vitae aliquet enim egestas dui...
-          </div>
-        </mat-card-content>
-        <mat-card-actions>
-          <a href=""><span>Read</span><mat-icon svgIcon="right"></mat-icon></a>
-        </mat-card-actions>
-      </mat-card>
-      <mat-card appToGray>
-        <img mat-card-image src="assets/img/card3.png">
-        <div class="type">
-          <mat-icon svgIcon="files"></mat-icon>
-          <span>Article</span>
-        </div>
-        <mat-card-content>
-          <div class="meta">
-            <span>Design</span> | <mat-icon svgIcon="calendar"></mat-icon><span> August 8, 2020</span> | <mat-icon svgIcon="clock"></mat-icon> <span>36 min</span>
-          </div>
-          <div class="topic">
-            <p>Should you choose a creative profession if you are attracted to creativity?</p>
-          </div>
-          <div class="text">
-            Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...
-          </div>
-        </mat-card-content>
-        <mat-card-actions>
-          <a href=""><span>Read</span><mat-icon svgIcon="right"></mat-icon></a>
-        </mat-card-actions>
-      </mat-card>
+      <div class="card-unit" appToGray><app-blog-post-card [Data]="card1"></app-blog-post-card></div>
+      <div class="card-unit" appToGray><app-blog-post-card [Data]="card2"></app-blog-post-card></div>
+      <div class="card-unit" appToGray><app-blog-post-card [Data]="card3"></app-blog-post-card></div>
     </div>
   </div>
   <div class="view-more">

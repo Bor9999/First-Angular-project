@@ -1,0 +1,35 @@
+<div class="card-body" appToGray>
+  <div class="card-top">
+    <div class="card-type">
+      <mat-icon class="miniIcon" [svgIcon]="typeIcon"></mat-icon>
+      <span>{{type}}</span>
+    </div>
+    <div class="card-img">
+      <img [src]="imgPath" alt="">
+    </div>
+  </div>
+  <div class="card-content">
+    <div class="card-meta">
+      <span>{{tag}}</span>
+      <div class="divider"></div>
+      <div class="meta-section">
+        <mat-icon svgIcon="calendar" class="miniIcon"></mat-icon>
+        <span> {{date}}</span>
+      </div>
+      <div class="divider" *ngIf="time"></div>
+      <div *ngIf="time" class="meta-section">
+        <mat-icon svgIcon="clock" class="miniIcon"></mat-icon>
+        <span>{{time}}</span>
+      </div>
+    </div>
+    <div class="card-title">
+      {{title}}
+    </div>
+    <div class="card-text">
+      {{text}}
+    </div>
+  </div>
+  <div class="actions">
+    <a [routerLink]="link"><span>{{typeButton}}</span><mat-icon svgIcon="right" class="arrowIcon"></mat-icon></a>
+  </div>
+</div>

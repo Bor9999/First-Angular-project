@@ -1,0 +1,108 @@
+.card-body{
+  height: 507px;
+  position: relative;
+
+  .miniIcon{
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    ::ng-deep svg{
+      fill: #424551;
+    }
+  }
+  .arrowIcon{
+    width: 24px;
+    height: 24px;
+    margin-left: 11px;
+    ::ng-deep svg{
+      fill: var(--red-color);
+    }
+  }
+  .divider{
+    display: block;
+    height: 12px;
+    width: 1px;
+    border-left: 1px solid #787A80;
+    margin-right: 12px;
+    margin-left: 12px;
+  }
+  .card-top{
+    position: relative;
+    margin-bottom: 16px;
+
+    .card-img{
+      img {
+        height: 300px;
+        width: 100%;
+      }
+    }
+    .card-type{
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background-color: #fff;
+      border-radius: 4px;
+      padding: 1px 8px;
+      display: flex;
+      align-items: center;
+
+      span {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #424551;
+      }
+
+    }
+  }
+  .card-content{
+
+    .card-meta{
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      span {
+        color: #787A80;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+      }
+      .meta-section{
+        align-items: center;
+        display: flex;
+      }
+
+    }
+    .card-title{
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      color: #1E212C;
+      margin-bottom: 8px;
+    }
+    .card-text{
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      color: #424551;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+  }
+  .actions{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 160%;
+      color: var(--dark-blue-color);
+    }
+  }
+}
