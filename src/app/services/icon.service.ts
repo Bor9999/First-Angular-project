@@ -26,6 +26,7 @@ export class IconService {
     'right',
     'person',
     'video',
+    'stroke-down',
   ];
   defaultIconsPath = 'assets/img/icons';
   constructor(

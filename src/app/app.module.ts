@@ -23,6 +23,9 @@ import { ChartService } from './services/chart.service';
 import { ContactsContainerService } from './services/contacts-container.service';
 import { BlogMainComponent } from './content/blog/blog-main/blog-main.component';
 import { BlogPostCardComponent } from './content/blog/common/blog-post-card/blog-post-card.component';
+import { SubscribtionComponent } from './content/blog/common/subscribtion/subscribtion.component';
+import { CustomSelectComponent } from './UIkit/custom-select/custom-select.component';
+import { CustomSearchbarComponent } from './UIkit/custom-searchbar/custom-searchbar.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,9 @@ import { BlogPostCardComponent } from './content/blog/common/blog-post-card/blog
     ChartsContainerComponent,
     BlogMainComponent,
     BlogPostCardComponent,
+    SubscribtionComponent,
+    CustomSelectComponent,
+    CustomSearchbarComponent,
   ],
   imports: [
     BrowserModule,

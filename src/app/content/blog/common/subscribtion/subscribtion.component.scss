@@ -1,0 +1,75 @@
+.subscribe-back{
+  background: #F4F5F7;
+  height: 454px;
+  .subscribe{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .subsrive__form{
+      width: 50%;
+      .title{
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 130%;
+        color: var(--dark-blue-color);
+        font-style: normal;
+        margin-bottom: 48px;
+      }
+      .block{
+        margin-top: 24px;
+        [type="email"] {
+          padding: 13px 16px;
+          height: 52px;
+          width: 422px;
+          margin-right: 24px;
+          border-radius: 4px;
+          background-color: #fff;
+          border: 1px solid #D7DADD;
+        }
+        button{
+          letter-spacing: 0.5px;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 52px;
+          padding: 0 40px;
+          background-color: var(--red-color);
+          border: none;
+          color: #fff;
+          border-radius: 4px;
+        }
+        .check{
+          display: flex;
+          align-items: center;
+          .check__input {
+            appearance: none;
+            position: absolute;
+          }
+          .check__box {
+            overflow: hidden;
+            height: 16px;
+            width: 16px;
+            background-color: white;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: 95%;
+            border: 2px solid var(--red-color);
+            border-radius: 3px;
+            display: inline-block;
+            margin-right: 10px;
+            span{
+              margin-right: 5px;
+            }
+          }
+          .check__input:checked + .check__box {
+            background-color: var(--red-color);
+            background-image: url(/assets/img/check.svg);
+          }
+          .check__input:focus + .check__box {
+            box-shadow: 0 0 0 0.1em #ff2aca;
+          }
+        }
+      }
+    }
+  }
+}

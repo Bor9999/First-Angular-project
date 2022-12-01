@@ -3,6 +3,24 @@
     <h6>Our blog</h6>
     <h1>Createx School Journal</h1>
   </header>
+  <div class="toolbar">
+    <div class="tab-bar">
+      <div class="tab-unit active">All</div>
+      <div class="tab-unit">
+        <mat-icon svgIcon="files"></mat-icon>Articles</div>
+      <div class="tab-unit">
+        <mat-icon svgIcon="video"></mat-icon>Videos</div>
+      <div class="tab-unit"><mat-icon svgIcon="mic"></mat-icon>Podcasts</div>
+    </div>
+    <div class="toolbar-group">
+      <div class="blog-category-select-box">
+        <p>Blog category</p>
+        <app-custom-select class="select" title="all themes" [options]="selectData"></app-custom-select>
+      </div>
+      <app-custom-searchbar class="searchbar"></app-custom-searchbar>
+    </div>
+  </div>
+
   <div class="cards-table">
     <app-blog-post-card [Data]="card1" class="card"></app-blog-post-card>
     <app-blog-post-card [Data]="card2" class="card"></app-blog-post-card>
@@ -13,6 +31,15 @@
     <app-blog-post-card [Data]="card7" class="card"></app-blog-post-card>
     <app-blog-post-card [Data]="card8" class="card"></app-blog-post-card>
   </div>
-
+  <div class="pagination">
+    <div class="pag-unit active">1</div>
+    <div class="pag-unit">2</div>
+    <div class="pag-unit">3</div>
+    <div class="pag-unit">4</div>
+    <div class="pag-unit"><mat-icon svgIcon="right"></mat-icon></div>
+  </div>
  </div>
 
+ <div class="subs">
+ <app-subscribtion></app-subscribtion>
+</div>

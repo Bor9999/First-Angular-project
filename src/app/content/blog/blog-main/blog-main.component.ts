@@ -79,6 +79,12 @@ export class BlogMainComponent implements OnInit {
     title: 'How to get customers to love your business from the start',
   };
 
+  selectData = [
+    { id: 1, name: 'Articles' },
+    { id: 2, name: 'Videos' },
+    { id: 3, name: 'Podcasts' },
+  ];
+
   constructor() {}
 
   ngOnInit(): void {}
